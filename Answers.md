@@ -7,10 +7,10 @@
 ### 1. Explain the relationship between the "Product" and "Product_Category" entities from the above diagram. ###
 
 In the "Product" table:</br>
-The category_id field establishes a Many-to-One relationship with the "Product_Category" table.</br>
-This indicates that multiple products can belong to the same category (Many-to-One).</br>
 The category_id field is a foreign key that refers to the primary key (id) in the "Product_Category" table.</br>
-This establishes a link between each product and a specific category.
+This establishes a link between each product and a specific category.</br>
+The category_id field establishes a Many-to-One relationship with the "Product_Category" table.</br>
+This indicates that multiple products can belong to the same category (Many-to-One).
 
 In the "Product_Category" table:</br>
 The id field is the primary key, serving as a unique identifier for each category.</br>
