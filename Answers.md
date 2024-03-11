@@ -1,8 +1,8 @@
-<!-- ### Read the diagram carefully and answer the below questions. ### -->
+**Answers**
+
 
 ![ecommerce table](https://raw.githubusercontent.com/iAmritMalviya/DB-Assignment/main/product-management-ecommerce-table-.webp)
 
-**Answers**
 
 ### 1. Explain the relationship between the "Product" and "Product_Category" entities from the above diagram. ###
 
@@ -22,56 +22,4 @@ To ensure that each product in the "Product" table has a valid category assigned
 
 ### 3. Create schema in any Database script or any ORM (Object Relational Mapping). ###
 
-# <schema.sql link>
--- product_category schema
-CREATE TABLE product_category (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
-    desc TEXT,
-    created_at TIMESTAMP,
-    modified_at TIMESTAMP,
-    deleted_at TIMESTAMP
-);
-
--- product_inventory schema
-CREATE TABLE product_inventory (
-    id INT PRIMARY KEY,
-    quantity INT,
-    created_at TIMESTAMP,
-    modified_at TIMESTAMP,
-    deleted_at TIMESTAMP
-);
-
--- discount schema
-CREATE TABLE discount (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
-    desc TEXT,
-    discount_percentage DECIMAL,
-    active BOOLEAN,
-    created_at TIMESTAMP,
-    modified_at TIMESTAMP,
-    deleted_at TIMESTAMP
-);
-
--- product schema
-CREATE TABLE product (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
-    desc TEXT,
-    SKU VARCHAR(255),
-    category_id INT,
-    inventory_id INT,
-    price DECIMAL,
-    discount_id INT,
-    created_at TIMESTAMP,
-    modified_at TIMESTAMP,
-    deleted_at TIMESTAMP,
-    FOREIGN KEY (category_id) REFERENCES product_category(id),
-    FOREIGN KEY (inventory_id) REFERENCES product_inventory(id),
-    FOREIGN KEY (discount_id) REFERENCES discount(id)
-);
-
-
-~ Aditya Prakash Singh
-
+# <a href='https://github.com/aditya-prakash-singh/DB-Assignment/blob/main/schema.sql'>Link</a>
