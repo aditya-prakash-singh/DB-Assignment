@@ -2,7 +2,7 @@
 CREATE TABLE product_category (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    'desc' TEXT,
+    `desc` TEXT,
     created_at TIMESTAMP,
     modified_at TIMESTAMP,
     deleted_at TIMESTAMP
@@ -21,7 +21,7 @@ CREATE TABLE product_inventory (
 CREATE TABLE discount (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    'desc' TEXT,
+    `desc` TEXT,
     discount_percentage DECIMAL,
     active BOOLEAN,
     created_at TIMESTAMP,
@@ -33,7 +33,7 @@ CREATE TABLE discount (
 CREATE TABLE product (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    'desc' TEXT,
+    `desc` TEXT,
     SKU VARCHAR(255),
     category_id INT,
     inventory_id INT,
@@ -46,3 +46,5 @@ CREATE TABLE product (
     FOREIGN KEY (inventory_id) REFERENCES product_inventory(id),
     FOREIGN KEY (discount_id) REFERENCES discount(id)
 );
+-- "DESC" is a reserved keyword in MySQL, so we can't use it as a column name directly.
+-- However, we can use backticks (``) to do so.
