@@ -14,7 +14,6 @@ This indicates that multiple products can belong to the same category (Many-to-O
 
 In the "Product_Category" table:</br>
 The id field is the primary key, serving as a unique identifier for each category.</br>
-The "Product" table's category_id references the id field in a Many-to-One relationship.</br>
 The "Product" table's category_id references this id field, creating a relationship between products and their respective categories.
 
 The relationship allows each product to be associated with a single category from the "Product_Category" table.
